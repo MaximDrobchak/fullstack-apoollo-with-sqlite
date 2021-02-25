@@ -1,0 +1,36 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "dev": "nodemon ./index.js --exec babel-node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "lasted",
+    "apollo-server-express": "lasted",
+    "body-parser": "lasted",
+    "casual": "lasted",
+    "express": "lasted",
+    "graphql": "lasted",
+    "graphql-tools": "lasted",
+    "lodash": "lasted",
+    "sequelize": "lasted",
+    "sqlite": "lasted",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "lasted",
+    "babel-preset-env": "lasted",
+    "nodemon": "lasted"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
