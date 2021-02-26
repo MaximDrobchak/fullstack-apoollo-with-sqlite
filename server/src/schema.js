@@ -4,7 +4,9 @@ const resolvers = require("./resolvers");
 const typeDefs = `
 type Query {
   author(id: ID!): Author
+  post(id: ID!): Post
   allAuthors: [Author]
+  allPosts: [Post]
 }
 type Author {
   id: ID!
