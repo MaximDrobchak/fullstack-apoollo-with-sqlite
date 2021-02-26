@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 
 const db = new Sequelize('blog', null, null, {
   dialect: 'sqlite',
-  storage: './blog.sqlite',
+  storage: './data/blog.sqlite',
 });
 
 const AuthorModel = db.define('author', {
