@@ -1,0 +1,19 @@
+{
+  "name": "apollo-full-stack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/MaximDrobchak/fullstack-apoollo-with-sqlite.git",
+  "author": "Maksim Drobchak <maksim.drobchak@kenshoo.com>",
+  "license": "MIT",
+  "scripts": {
+    "client": "cd client && yarn start",
+    "server": "cd server && yarn start",
+    "client:install": "cd client && yarn",
+    "server:install": "cd server && yarn",
+    "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "all:install": "concurrently --kill-others-on-fail \"yarn server:install\" \"yarn client:install\""
+  },
+  "dependencies": {
+    "concurrently": "^6.0.0"
+  }
+}

@@ -1,4 +1,4 @@
-const { Author, View, Post } = require('./connectors');
+  const { Author, View, Post } = require('./connectors');
 
 const resolvers = {
   Query: {
@@ -45,7 +45,9 @@ const resolvers = {
     },
     addAuthor: async (_, { firstName, lastName, posts }) => {
       try {
-        await Author.create({firstName, lastName, posts: posts ? JSON.parse(posts) : [] });
+        const authorPosts =  JSON.parse(posts);
+        authorPosts.forEach(post => Post.create(post));
+        await Author.create({firstName, lastName, posts: authorPosts });
         return { success: true, error: "" };
       } catch (error) {
         return { success: false, error: "Create autrhor filed!", messsage: error.messsage };
@@ -61,7 +63,9 @@ const resolvers = {
     },
     updateAuthor: async (_, { firstName, lastName, posts, id }) => {
       try {
-        await Author.update({ firstName, lastName, posts: posts ? JSON.parse(posts) : [] }, { where: { id } });
+        const authorPosts =  JSON.parse(posts);
+        authorPosts.forEach(post => Post.update(post, { where: { id: post.id }}));
+        await Author.update({ firstName, lastName, posts: authorPosts }, { where: { id } });
         return { success: true, error: "" };
       } catch (error) {
         return { success: false, error: "Update autrhor filed!", messsage: error.messsage };

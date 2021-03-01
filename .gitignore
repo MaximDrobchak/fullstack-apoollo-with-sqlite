@@ -16,4 +16,5 @@
 .env.test.local
 .env.production.local
 
-
+yarn-error.log
+node_modules
