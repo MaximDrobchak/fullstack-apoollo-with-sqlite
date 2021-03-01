@@ -11,7 +11,7 @@ export const PostListContainer = styled.div`
   width: 80vw;
   height: 80vh;
   border-radius: 50px 50px;
-  border:0.5px solid lightgrey;
+  border: 0.5px solid lightgrey;
   overflow-x: hidden;
   overflow-y: auto;
   left: 10vw;

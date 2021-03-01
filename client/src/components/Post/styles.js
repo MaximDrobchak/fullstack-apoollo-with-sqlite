@@ -6,9 +6,8 @@ export const List = styled.div`
   display: flex;
   flex-wrap: wrap;
   border-radius: 15px;
-  border:0.5px solid lightgrey;
+  border: 0.5px solid lightgrey;
 `;
-
 
 export const TitlePost = styled.div`
   font-size: 18px;

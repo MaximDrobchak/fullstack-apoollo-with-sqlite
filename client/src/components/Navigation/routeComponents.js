@@ -1,4 +1,3 @@
-
 import Loading from '../Loading';
 import Loadable from 'react-loadable';
 

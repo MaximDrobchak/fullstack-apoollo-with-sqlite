@@ -8,12 +8,12 @@ export const GET_ALL_POSTS = gql`
       title
       text
       author {
-      id
-      firstName
-      lastName
+        id
+        firstName
+        lastName
       }
     }
-   }
+  }
 `;
 
 // export const GET_AUTHOR = gql`

@@ -5,9 +5,9 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-   > * {
-     margin: auto;
-   }
+  > * {
+    margin: auto;
+  }
 `;
 
 export const Overlay = styled.div`
